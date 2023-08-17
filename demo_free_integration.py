@@ -47,7 +47,7 @@ def test_free_integration():
     Free integration requires initial states (position, velocity and attitude). You should provide
     theses values when you create the algorithm object.
     '''
-    ini_pos_vel_att = np.genfromtxt(motion_def_path+"//motion_def-90deg_turn.csv",\
+    ini_pos_vel_att = np.genfromtxt(motion_def_path+"//motion_def.csv",\
                                     delimiter=',', skip_header=1, max_rows=1)
     ini_pos_vel_att[0] = ini_pos_vel_att[0] * D2R
     ini_pos_vel_att[1] = ini_pos_vel_att[1] * D2R
@@ -63,7 +63,7 @@ def test_free_integration():
 
     #### start simulation
     sim = ins_sim.Sim([fs, 0.0, 0.0],
-                      motion_def_path+"//motion_def-90deg_turn.csv",
+                      motion_def_path+"//motion_def.csv",
                       ref_frame=1,
                       imu=imu,
                       mode=None,

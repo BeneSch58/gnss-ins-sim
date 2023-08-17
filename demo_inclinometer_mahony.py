@@ -50,7 +50,7 @@ def test_inclinometer_mahony():
                       mode=None,
                       env=None,#'[0.01 0.01 0.11]g-random',
                       algorithm=algo)
-    sim.run()
+    sim.run(4)
     # generate simulation results, summary, and save data to files
     sim.results()  # do not save data
     # plot data

@@ -51,5 +51,7 @@ def test_path_gen():
     # plot data
     sim.plot(['att_euler', 'ab', 'wb'])
 
+    
+
 if __name__ == '__main__':
     test_path_gen()

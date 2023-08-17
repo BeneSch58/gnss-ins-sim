@@ -15,7 +15,8 @@ from gnss_ins_sim.sim import imu_model
 from gnss_ins_sim.sim import ins_sim
 
 # log_dir = "./demo_data_files/nxp/"
-log_dir = "./demo_data_files/bosch/"
+#log_dir = "./demo_data_files/bosch/"
+log_dir = "./demo_data_files/test/"
 fs = 100.0          # IMU sample frequency
 using_external_g = True
 

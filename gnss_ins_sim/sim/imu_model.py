@@ -16,16 +16,16 @@ D2R = math.pi/180
 # low accuracy, from AHRS380
 #http://www.memsic.cn/userfiles/files/Datasheets/Inertial-System-Datasheets/AHRS380SA_Datasheet.pdf
 gyro_low_accuracy = {'b': np.array([0.0, 0.0, 0.0]) * D2R,
-                     'b_drift': np.array([10.0, 10.0, 10.0]) * D2R/3600.0,
+                     'b_drift': np.array([0.0, 0.0, 0.0]) * D2R/3600.0,
                      'b_corr':np.array([100.0, 100.0, 100.0]),
-                     'arw': np.array([0.75, 0.75, 0.75]) * D2R/60.0}
-accel_low_accuracy = {'b': np.array([0.0e-3, 0.0e-3, 0.0e-3]),
-                      'b_drift': np.array([2.0e-4, 2.0e-4, 2.0e-4]),
+                     'arw': np.array([0.0, 0.0, 0.0]) * D2R/60.0}
+accel_low_accuracy = {'b': np.array([0.0, 0.0, 0.0]),
+                      'b_drift': np.array([0.0, 0.0, 0.0]),
                       'b_corr': np.array([100.0, 100.0, 100.0]),
-                      'vrw': np.array([0.05, 0.05, 0.05]) / 60.0}
+                      'vrw': np.array([0.0, 0.0, 0.0]) / 60.0}
 mag_low_accuracy = {'si': np.eye(3) + np.random.randn(3, 3)*0.0,
-                    'hi': np.array([10.0, 10.0, 10.0])*0.0,
-                    'std': np.array([0.1, 0.1, 0.1])}
+                    'hi': np.array([0.0, 0.0, 0.0])*0.0,
+                    'std': np.array([0.0, 0.0, 0.0])}
 # mid accuracy, partly from IMU381
 gyro_mid_accuracy = {'b': np.array([0.0, 0.0, 0.0]) * D2R,
                      'b_drift': np.array([3.5, 3.5, 3.5]) * D2R/3600.0,
@@ -53,8 +53,8 @@ mag_high_accuracy = {'si': np.eye(3) + np.random.randn(3, 3)*0.0,
                      'std': np.array([0.001, 0.001, 0.001])}
 
 ## built-in GPS error profiles
-gps_low_accuracy = {'stdp': np.array([5.0, 5.0, 7.0]),
-                    'stdv': np.array([0.05, 0.05, 0.05])}
+gps_low_accuracy = {'stdp': np.array([0.0, 0.0, 0.0]),
+                    'stdv': np.array([0.0, 0.0, 0.0])}
 
 ## built-in odometer error profiles
 odo_low_accuracy = {'scale': 0.99,

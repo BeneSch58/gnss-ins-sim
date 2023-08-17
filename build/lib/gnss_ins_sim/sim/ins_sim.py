@@ -11,7 +11,7 @@ import os
 import time
 import math
 import numpy as np
-from gnss_ins_sim.sim.ins_data_manager import InsDataMgr
+from .ins_data_manager import InsDataMgr
 from .ins_algo_manager import InsAlgoMgr
 from ..pathgen import pathgen
 from ..attitude import attitude
